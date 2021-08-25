@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ekt-cR-EIV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Book View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BookViewController" customModule="BookGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-od-jEK" userLabel="Book Collection">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z8X-4h-vxd">
+                                    <size key="itemSize" width="187" height="229"/>
+                                    <size key="estimatedItemSize" width="187" height="229"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Item" id="Pcb-fQ-udh" customClass="BookCollectionViewCell" customModule="BookGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="229"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tqh-GY-APl">
+                                            <rect key="frame" x="0.0" y="0.0" width="187" height="229"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="El nombre de la rosa" translatesAutoresizingMaskIntoConstraints="NO" id="eNy-OD-evP" userLabel="bookImageView">
+                                                    <rect key="frame" x="0.0" y="8" width="187" height="229"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="187" height="229"/>
+                                        <connections>
+                                            <outlet property="bookImageView" destination="eNy-OD-evP" id="s3i-OD-T7S"/>
+                                            <segue destination="6qw-DP-M0V" kind="show" id="M5O-i8-9BB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dlM-CC-fdM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FcE-NV-4rq"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9XL-od-jEK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="4wA-Y3-3oy"/>
+                            <constraint firstItem="9XL-od-jEK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="aR5-nH-Ree"/>
+                            <constraint firstItem="9XL-od-jEK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bPN-c9-k59"/>
+                            <constraint firstItem="9XL-od-jEK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qiW-bk-01u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="top-6N-yb7"/>
+                    <connections>
+                        <outlet property="BookCollection" destination="9XL-od-jEK" id="pum-mr-tHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="115.84821428571428"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Wc6-Ye-Fel">
+            <objects>
+                <viewController id="6qw-DP-M0V" customClass="DetailViewController" customModule="BookGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4vb-mm-fNt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3R5-YL-L6g">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="T2d-lP-Qay"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d7t-ie-ErE" userLabel="detailImage">
+                                <rect key="frame" x="87" y="211" width="240" height="267"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qal-yx-Y0M" userLabel="labelName">
+                                <rect key="frame" x="87" y="526" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mag-VF-y8M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mag-VF-y8M" firstAttribute="trailing" secondItem="d7t-ie-ErE" secondAttribute="trailing" constant="87" id="8my-rU-iAe"/>
+                            <constraint firstItem="3R5-YL-L6g" firstAttribute="top" secondItem="Mag-VF-y8M" secondAttribute="top" id="CnA-L6-R5a"/>
+                            <constraint firstItem="d7t-ie-ErE" firstAttribute="top" secondItem="3R5-YL-L6g" secondAttribute="bottom" constant="79" id="FU1-3q-EJe"/>
+                            <constraint firstItem="qal-yx-Y0M" firstAttribute="leading" secondItem="Mag-VF-y8M" secondAttribute="leading" constant="87" id="PuS-B9-hpQ"/>
+                            <constraint firstItem="qal-yx-Y0M" firstAttribute="top" secondItem="d7t-ie-ErE" secondAttribute="bottom" constant="48" id="S6L-tL-5WN"/>
+                            <constraint firstItem="3R5-YL-L6g" firstAttribute="leading" secondItem="Mag-VF-y8M" secondAttribute="leading" id="acV-Vl-Zzz"/>
+                            <constraint firstItem="d7t-ie-ErE" firstAttribute="top" secondItem="3R5-YL-L6g" secondAttribute="bottom" constant="79" id="ckc-eg-kO1"/>
+                            <constraint firstItem="Mag-VF-y8M" firstAttribute="bottom" secondItem="d7t-ie-ErE" secondAttribute="bottom" constant="384" id="qaK-gK-PhB"/>
+                            <constraint firstItem="3R5-YL-L6g" firstAttribute="trailing" secondItem="Mag-VF-y8M" secondAttribute="trailing" id="qgP-iv-66H"/>
+                            <constraint firstItem="d7t-ie-ErE" firstAttribute="leading" secondItem="Mag-VF-y8M" secondAttribute="leading" constant="87" id="sJE-1A-ysg"/>
+                            <constraint firstItem="Mag-VF-y8M" firstAttribute="trailing" secondItem="qal-yx-Y0M" secondAttribute="trailing" constant="87" id="ufz-gb-cBj"/>
+                            <constraint firstItem="Mag-VF-y8M" firstAttribute="bottom" secondItem="qal-yx-Y0M" secondAttribute="bottom" constant="315" id="xbu-rd-jpq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="N4U-ee-v1w"/>
+                    <connections>
+                        <outlet property="detailImage" destination="d7t-ie-ErE" id="Sh9-oi-drd"/>
+                        <outlet property="labelName" destination="qal-yx-Y0M" id="Lif-Xe-sBC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUk-Qg-eEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3lW-iB-7Xp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ekt-cR-EIV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YfF-SD-Hsw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JPi-qr-FTG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88t-zF-ee8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="El nombre de la rosa" width="1470" height="2237"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
