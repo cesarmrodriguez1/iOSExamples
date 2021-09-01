@@ -1,0 +1,49 @@
+[
+   {
+      "id":1,
+      "name": "Pizza",
+      "imageName": "pizza",
+      "description": "Prueba la fabulosa pizza a la leña servida de la forma más elegante. Todas nuestras pizzas tiene ese gran toque especial que a ti te gusta. Puedes pedirla en diferentes versiones de pan y preparación. Te aseguramos que te encantarán.",
+      "category": "Cocina internacional"
+
+   },
+   {
+      "id":2,
+      "name": "Camarones al coco",
+      "imageName": "camarones",
+      "description": "Prueba nuestro platillo especial de camarones al coco, acompañado de papas a la francesa, arroz y ensalada. Nuestros platillos del mar se sirven con aderezo de la casa al gusto, y con una porción de consomé de camarón para el deleite de los paladares más exigentes.",
+      "category": "Delicias del mar"
+   },
+   {
+      "id":3,
+      "name": "Hamburguesa arrachera",
+      "imageName": "hamburguesa",
+      "description": "La hamburguesa arrachera está perfectamente creada para los amantes de los buenos cortes, prueba nuestra hamburguesa cocinada al término de tu preferencia, acompañada de papas a la francesa y salsa especial de la casa.",
+      "category": "Cocina internacional"
+   },
+   {
+      "id":4,
+      "name": "Helado en copa",
+      "imageName": "copa",
+      "description": "La hamburguesa arrachera está perfectamente creada para los amantes de los buenos cortes, prueba nuestra hamburguesa cocinada al término de tu preferencia, acompañada de papas a la francesa y salsa especial de la casa.",
+      "category": "Postre"
+
+   },
+   {
+      "id":5,
+      "name": "Soda italiana",
+      "imageName": "soda",
+      "name": "Camarones al coco",
+      "description": "Disfruta de una soda italiana en cualquiera de nuestros sabores: Limón, Cereza, Naranja, Manzana, Piña y Zarzamora",
+      "category": "Bebidas"
+
+   },
+      {
+      "id":6,
+      "name": "Sushi tempura",
+      "imageName": "sushi",
+      "description": "Deleitate con nuestros sushi tempura de la casa, acompañado con salsa de anguila y ensalada de zanahoria para acompañar.",
+      "category": "Cocina internacional"
+
+   }
+]
